@@ -1,0 +1,7 @@
+names_with_locations.csv:
+  source file: https://github.com/MatthiasWinkelmann/firstname-database/blob/master/firstnames.csv
+  license: GFDL
+
+names_with_meanings_and_origins.txt
+  source file: https://raw.githubusercontent.com/geoparser/geolocator-1.0/master/geo-locator/res/en/names.txt
+  license: Apache 2.0
