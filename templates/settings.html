@@ -1,0 +1,37 @@
+{% include 'headerbar.html' %}
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+<script src="/static/js/settings.js"></script>
+<div class="container" id="set-male-female">
+  Would you like to see more traditionally male or more traditionally female names?
+  <div class="d-flex w-100">
+    <div class="w-25 p-3" align="center">
+      More female
+    </div>
+    <div class="slidecontainer w-50 p-3">
+      <input type="range" min="1" max="7" value="{{ malefemaleprob }}" class="slider" id="malefemaleprob">
+    </div>
+    <div class="w-25 p-3" align="center">
+      More male
+    </div>
+  </div>
+</div>
+<div class="container w-100 p-3" id="set-focus-location-popularity">
+  <div class="btn-group">
+    <select id="dropdownFocusLocations" onChange="addLocation()">
+      <option>Focus on popular names in...</option>
+    </select>
+  </div>
+</div>
+<div class="container w-100 p-3" id="location-list">
+</div>
+<div class="container w-100 p-3" id="send-project">
+  <div class="d-flex w-100">
+    <div class="w-100 p-3">
+      Send this project to your significant other:
+      <input id="project-url" value="{{ base_url }}n/{{ family }}" readonly="readonly" class="w-50">
+      <button class="btn" id="copy-project-url"><i class="fas fa-copy"></i></button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

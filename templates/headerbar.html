@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
+  <link rel="stylesheet" href="/static/css/babyswipe.css">
+  <script src="/static/js/global.js"></script>
+  <title>Baby Name Picker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Baby Name Picker</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="/n/{{ family }}/{{ user }}" data-ajax="false">Pick Names</a>
+    <a class="p-2 text-dark" href="/n/{{ family }}/{{ user }}/review-answers" data-ajax="false">Review My Answers</a>
+    <a class="p-2 text-dark" href="/n/{{ family }}/{{ user }}/mutual-matches" data-ajax="false">Mutual Matches</a>
+    <a class="p-2 text-dark" href="/n/{{ family }}/{{ user }}/settings" data-ajax="false">Settings</a>
+  </nav>
+</div>

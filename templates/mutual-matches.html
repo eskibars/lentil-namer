@@ -1,0 +1,22 @@
+  {% include 'headerbar.html' %}
+  <div class="container" id="mutual-match">
+    <div class="card-deck">
+      {% for hit in hits %}
+        <div class="card text-white bg-success mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ hit['_source']['name'] }}</h5>
+          </div>
+        </div>
+        {% if loop.index is divisibleby 5 %}
+          <div class="w-100 d-none d-xl-block"><!-- wrap every 5 on xl--></div>
+        {% endif %}
+        {% if loop.last and loop.index is not divisibleby 5 %}
+          {% for x in range(0,5 - loop.length % 5) %}
+            <div class="card text-white mb-4 bg-transparent border-light"></div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

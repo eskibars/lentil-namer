@@ -1,0 +1,27 @@
+{
+    "mappings" : {
+      "properties" : {
+        "date" : {
+          "type" : "date"
+        },
+        "family" : {
+          "type" : "keyword"
+        },
+        "name" : {
+          "type" : "keyword"
+        },
+        "status" : {
+          "type" : "keyword"
+        },
+        "user" : {
+          "type" : "keyword"
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "number_of_shards" : "1",
+        "number_of_replicas" : "1"
+      }
+    }
+}

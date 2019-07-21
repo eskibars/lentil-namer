@@ -1,0 +1,61 @@
+{
+  "mappings" : {
+    "properties" : {
+      "popularity_regions": {
+        "type": "rank_features"
+      },
+      "female_probability" : {
+        "type" : "rank_feature"
+      },
+      "male_probability" : {
+        "type" : "rank_feature"
+      },
+      "total_popularity" : {
+        "type" : "rank_feature"
+      },
+      "description" : {
+        "type" : "text"
+      },
+      "name" : {
+        "type" : "keyword",
+        "copy_to" : [
+          "normalized_name"
+        ]
+      },
+      "normalized_name" : {
+        "type" : "keyword",
+        "normalizer" : "name_normalizer"
+      },
+      "origins" : {
+        "type" : "keyword"
+      },
+      "related_names" : {
+        "type" : "keyword"
+      }
+    }
+  },
+  "settings" : {
+    "index" : {
+      "number_of_shards" : "1",
+      "number_of_replicas" : "1",
+      "store" : {
+        "preload" : [
+          "nvd",
+          "dvd"
+        ]
+      },
+      "analysis" : {
+        "normalizer" : {
+          "name_normalizer" : {
+            "filter" : [
+              "lowercase",
+              "asciifolding"
+            ],
+            "type" : "custom",
+            "char_filter" : [ ]
+          }
+        }
+      }
+    }
+  }
+}
