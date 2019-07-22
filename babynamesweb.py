@@ -124,8 +124,11 @@ def settings(family, user):
 
 @app.route('/n/<string:family>/<string:user>/getsettings', methods = ['GET'])
 def getsettings(family, user):
-    currentuser = es.get(index='nameresults', id=user)
-    currentuser = currentuser['_source']
+    try:
+        currentuser = es.get(index='nameresults', id=user)
+        currentuser = currentuser['_source']
+    except:
+        current = { }
     if 'dislikes' in currentuser:
         currentuser.pop('dislikes')
     if 'likes' in currentuser:
